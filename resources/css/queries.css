@@ -1,0 +1,352 @@
+/* Inspiration from: 
+    w3schools.(n.d.). Responsive Web Design - Media Queries. https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+    and:
+    TouTube.(2017). 17: How to Make a Website Responsive | Learn HTML and CSS | HTML Tutorial | Basics of CSS. https://youtu.be/ZYV6dYtz4HA */
+
+/* ----------------------------------------------- */
+/* RESPONSIVE DESIGN FOR TABLET AND MOBILE */
+/* ----------------------------------------------- */
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px; }
+    section { padding: 30px 0; }
+    
+    .steps-box { margin-top: 10px; }
+    .steps-box:last-child { margin-top: 10px; }
+    
+    
+    .app-screen { width: 50%; }
+    
+    .icon-small { 
+        width: 17px;
+        margin-right: 5px;
+    }
+    
+    .box-cities p {
+    font-size: 74%;
+    }
+    
+
+}
+
+
+@media only screen and (min-width: 767px) {
+    .feedback-img {
+        padding: 1%;
+    }
+    
+    .header-btn {
+        font-size: 140%;
+    }
+    
+    /* Hanna Fisher and Marve flaxnes img fix */
+    .img-feedback img {
+        position: relative;
+        left: -15px;
+    }
+    
+    /* Hanna Fisher, Marve Flexnes name and Angus Brady fix */
+    .name-marve-hannah-angus {
+       position: absolute;
+        bottom: 6px;
+        left: 80px;
+    }
+    
+    /* Flag images */
+    .marve-hannah-angus img {
+    bottom: -30px;
+    left: 110px;
+    }
+    
+}
+
+
+/* Buttons in header */
+@media only screen and (min-width: 767px) and (max-width: 1050px) {
+    .header-btn {
+        font-size: 140%;
+    }
+}
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    
+    .row,
+    .hero-text-box { padding: 0 4%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    
+   .main-nav {
+        display: none;
+    }
+    
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+    
+    /* Makes the nav bar float to the left */
+    .main-nav {
+        float: left;
+        margin-top: 25px;
+    }
+    
+    /* Goes form inline-block to block */
+    .main-nav li {
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 6px 0;
+        font-size: 100%;
+    }
+    
+    /* Hover effect on the menu bar when < 768px */
+    .main-nav li a:hover,
+    .main-nav li a:active {
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        color: #000;
+    }
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .app-screen { width: 40%; }
+    .steps-box:first-child { text-align: center; }
+    
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+    
+    .city-text {
+        font-size: 150%;
+        padding: 1%;
+    }
+    
+    .section-cities h3 {
+        font-size: 150%;
+    }
+   
+    .box-cities img {
+        padding: 2%;
+    }
+    
+    .section-feedback {
+        font-size: 120%
+    }
+    
+    .feedback-text {
+        font-size: 110%;
+    }
+    
+    /* Hanna Fisher and Marve flaxnes img fix */
+    .img-feedback img {
+        position: relative;
+        left: -19px;
+    }
+    
+    /* Hanna Fisher and Marve Flexnes name fix */
+    .name-marve-hannah-angus {
+       position: absolute;
+        bottom: 6px;
+        left: 80px;
+    }
+    
+    /* Flag images */
+    .marve-hannah-angus img {
+    bottom: -30px;
+    left: 110px;
+    }
+    
+    .main-nav {
+        border-radius: 0;
+        margin-top: 0;
+    }
+    
+    .mobile-nav-icon {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 0 4px 0 0;
+        z-index: 200;
+    }
+    
+    
+}
+
+
+/* Between 460px to 767 - adjustments for the book section*/
+@media only screen and (max-width: 767px) and (min-width: 460px) {
+    
+    /* Enlarging of text */
+    .book-price-person {
+        font-size: 150%;
+    }
+    
+    /* Enlarging of text */
+    .book-price-family {
+        font-size: 150%; 
+    }
+    
+    /* Enlarging of text */
+    .cost-box li {
+        font-size: 150%;
+    }
+    
+    /* Enlarging of text */
+    .book-headings {
+        font-size: 150%;
+    }
+    
+    .cost-box img {
+        height: 120px;
+        margin: 0;
+    }
+    
+    .btn {
+        font-size: 140%;
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 536px) {
+    /* Fixing app images/buttons */
+    .apple img {
+        margin-left: 25%;
+    }
+}
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    .contact-form {width: 100%; }
+    
+    /* Margin between the 1,2,3 steps */
+    .workingSteps {
+        margin-bottom: 15px;
+    }
+    
+    /* Enlarging of text */
+    .book-price-person {
+        font-size: 140%;
+    }
+    
+    .book-headings {
+        font-size: 120%;
+    }
+    
+    /* Enlarging of text */
+    .book-price-family {
+        font-size: 140%; 
+    }
+    
+    /* Enlarging of text */
+    .cost-box li {
+        font-size: 140%;
+    }
+    
+    .cost-box img {
+        height: 75px;
+        margin: 0;
+    }
+    
+
+    
+    /* Makes the text box under location image wider */
+    .list-location {
+        width: 100%;
+        font-size: 82%;
+    }
+    
+    /* Margin after the last text box for each and every city office e-mail */
+    .end-text {
+        margin-bottom: 10px;
+    }
+    
+    /* Buttons on the Book section */
+    .book {
+        font-size: 140%;
+    }
+    
+    /* Making the margin bigger for mobile */
+    .location-showcase img {
+        margin-top: 10%;
+    }
+    
+    /* Heading for: Destinations, App and cities */
+    .text-steps {
+        font-size: 125%;
+    }
+    
+    /* Making the text smaller for mobile device */
+    .workingSteps {
+        font-size: 90%;
+    }
+    
+    /* Adjusting the red border size on the step on app section smaller*/
+    .workingSteps div {
+        height: 40px;
+        width: 40px;
+    }
+    
+    /* Making the h3 on city section 10% smaller */
+    .section-cities h3 {
+        font-size: 140%;
+    }
+    
+    /* Scaling the image smaller for smaller devices to see the whole image */
+    .section-feedback {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(img/feedback.jpg) no-repeat center fixed;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(img/feedback.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+    
+    /* Scaling the image smaller for smaller devices to see the whole image */
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.50)), to(rgba(0, 0, 0, 0.50))), url(img/heroImage.jpg) no-repeat center fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img/heroImage.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+    
+}
+
+@media only screen and (max-width: 380px) {
+    .btn-app img {
+        margin: 0 auto;
+    }
+}

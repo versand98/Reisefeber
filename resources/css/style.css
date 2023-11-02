@@ -1,0 +1,744 @@
+/*-----NOTE: Optimalization for different browsers is added using AutoPrefixer via Brackets embedded AutoPrefix selection-----*/
+
+
+/*-------Color codes--------*/
+
+    /* Floral white: #fffaf0 
+    /* Red: #f65058
+    /* Darker red: #f4202a
+    /* Blue: #3f4a75
+
+/*--------------------------*/
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP and REUSABLE CONTENT*/
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    color: #fffaf0;
+    font-family: "Palatino Linotype", sans-serif, "Arial"; 
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*-----Section-----*/
+section {
+    padding: 40px 0;
+    //height: 100vh;
+}
+
+/*-----Section box with h2 and p text-----*/
+.box {
+    padding: 2%;
+}
+
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+/* Containing hero image */
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.50)), to(rgba(0, 0, 0, 0.50))), url(img/heroImage.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img/heroImage.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed; /* The fixed property makes the background-image NOT scroll with the page */
+}
+
+/* Possitions the heading text */
+.hero-text-box {
+    position: absolute;
+    width: auto;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Common styling for the h1, h2 text */
+h1, 
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;  
+}
+
+/* Style specific for h1 */
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fffaf0;
+    font-size: 220%;
+    word-spacing: 3px;
+}
+
+/* Styling specific for the h2 text */
+h2 {
+    font-size: 130%;
+    word-spacing: 2px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Adds a blue underline after the h2 text */
+h2:after {
+    display: block;
+    height: 1px;
+    background-color: #f65058; /**/
+    content: " ";
+    width: 100%;
+    margin: left;
+}
+
+/* Styling specific for the h3 text */
+h3 {
+    font-size: 110%;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Padding and style for the paragraphs */
+p {
+    font-family: sans-serif;
+    color: #000;
+    padding: 10px 0;
+}
+
+/* Styles the paragraph text in the box section */
+.box p {
+    font-size: 90%;
+}
+
+
+/*-----Logo-----*/
+
+.logo {
+    opacity: 0.7;
+    height: 60px;
+    width: auto;
+    float: left;
+    margin: 10px;
+    border-radius: 15%
+}
+
+/*-----Navigation menu-----*/
+
+/* Positions the main navigation menu - fixed bar */
+.main-nav {
+    position: fixed;
+    list-style: none;
+    margin-top: 0;
+    right: 0;
+    padding: 1px;
+    border-radius: 200px;
+    font-size: 140%;
+    background-color: rgba(172, 168, 168, 0.8);
+    z-index: 100; /* To stay above all other content */
+}
+
+/* Displays the navigation bar in a straight line */
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 5px;
+}
+
+/* Editing the links */
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 7px 0;
+    color: #fffaf0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
+}
+
+/* Hover effects on the links in the navigation bar */
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #f65058;
+}
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+    display: none;
+    color: #f4202a;
+}
+
+/* Hamburger menu */
+.mobile-nav-icon i {
+    font-size: 225%;
+}
+
+/* ----------------------------------------------- */
+/* BUTTONS WITHIN THE HEADER */
+/* ----------------------------------------------- */
+
+/* Styling to the buttons under the heading text */
+.btn:link, 
+.btn:visited {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 0 5px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 100px;
+    color: #fffaf0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; /* smooth color change on buttons when hovered over */
+}
+
+
+/* Styling on the "I wamt to Travel & About Us" button */
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 2px solid #f65058;
+    color: #fffaf0;
+    //background-color: #f65058;
+    //opacity: 0.6;
+}
+
+/* Hover effect for the two buttons over the hero image */
+.btn:hover,
+.btn:active {
+    background-color: #f4202a;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 2px solid #f65058;
+    color: #fffaf0;
+    //opacity: 1;
+}
+
+
+/* ----------------------------------------------- */
+/* ICONS & THE NORWEGIAN FLAG */
+/* ----------------------------------------------- */
+
+/* Styles the norwegian flag */
+.norwegianFlag {
+    width: 14%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+/* Styles the icon1 */
+.icon1 {
+    font-size: 300%;
+    display: block;
+    color: #f65058;
+    margin-bottom: 20px;
+}
+
+
+/* ----------------------------------------------- */
+/* SECTION LOCATION */
+/* ----------------------------------------------- */
+
+.section-location {
+        background-color: #000;
+    }
+
+/* Heading */
+
+.location-heading {
+    //font-size: 100%;
+    text-align: center;
+    color: #fffaf0;
+    margin: 4% 0 0 0;
+}
+
+/*-----Image-----*/
+
+/* Location image */
+.location-showcase img {
+    width: 100%;
+    height: auto;
+}
+
+/*-----Black background-----*/
+
+.rowlocation {
+    width: auto;
+}
+
+/* Makes the background around the location-paragraph black and makes it possible to read the white text */
+.row-location {
+    margin: 0 auto;
+    background-color: #000;
+}
+
+
+/* Styles the text belonging to the location image */
+.list-location {
+    width: 85%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+/* Adjusting the with of the text */
+.list-location li {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Colors the text paragraph */
+.list-location p {
+    color: #fffaf0;
+}
+
+
+/* ----------------------------------------------- */
+/* SECTION DESTINATIONS */
+/* ----------------------------------------------- */
+
+/* Making the padding equal to 0 arount the destination section */
+.section-destinations {
+    padding: 0;
+    margin-top: 3%;
+}
+
+/*  */
+.destination-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+/* Floating the images next to each other, starting from left */
+.destinations-showcase li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+/* Making each image 100% width of its parent element */
+.destinations-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000; /* Making the backround color behing the images black instead of white */
+}
+
+/* Formating the actual image inside the photo container  */
+.destinations-photo img {
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25); /* Scaling up the image size by 25% */
+    -webkit-transition: 0.7s, opacity 0.7s;
+    transition: 0.7s, opacity 0.7s; /* transition deciding the timelaps for scaling and opacity */
+    opacity: 0.6; 
+}
+
+/* Hover for the images in the destination section */
+.destinations-photo img:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03); /* Scaling the image back to normal when hovering over */
+    opacity: 1.0;
+}
+
+/* Horizontal line after image row */
+.hrzl-1 {
+    display: block;
+    border: 2px solid #3f4a75;
+    margin-bottom: 40px;
+}
+
+.geiranger-link {
+    cursor: pointer;
+}
+
+
+/*
+.img-text {
+    margin-top: 0;
+}*/
+
+
+/* ----------------------------------------------- */
+/* SECTION MOBILE APP */
+/* ----------------------------------------------- */
+
+/* Centers the h2 text */
+.text-steps {
+    text-align: center;
+}
+
+/* Centers and styles the red border after the h2 text */
+.text-steps:after {
+    margin: 10px auto 20px auto;
+    height: 2px;
+    background-color: #f65058;
+    width: 15%;
+}
+
+/* The first of the step boxes (the one to the left - iPhone image) */
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%; /* Choosing per cent instead of pixels for responsive design reasons */
+    margin-top: 20px;
+}
+
+/* The second of the step boxes (to the right - bullet point) */
+.steps-box:last-child {
+    padding-left: 3%; /* Choosing per cent instead of pixels for responsive design reasons */
+    margin-top: 65px;
+}
+
+
+.app-screen {
+    width: 40%;
+}
+
+/* Margin between the 1,2,3 steps */
+.workingSteps {
+    margin-bottom: 50px;
+}
+
+/* Adjusting the margin below the last bullet point */
+.last {
+    margin-bottom: 10px;
+}
+
+/* Bullet points style and positioning */
+.workingSteps div {
+    color: #f65058;
+    border: 2px solid #f65058;
+    display: inline-block; /* Ensures that the element do not force a line break */
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 20px; 
+}
+
+/* -----Button Apps----- */
+
+/* Removes the red border under the app symbol images */
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+
+.btn-app img {
+    height: 150px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/* ----------------------------------------------- */
+/* SECTION CITY OFFICES */
+/* ----------------------------------------------- */
+
+
+/* Makes the background go dark */
+.section-cities {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.box-cities {
+    padding: 1%;
+    float: left;
+}
+
+.box-cities img {
+    width: 100%;
+    height: auto;
+}
+
+/* Info text */
+.box-cities p {
+    font-size: 90%;
+    color: #fffaf0;
+    padding: 1%;
+}
+
+/* Red thin underline to separate the text */
+.hrzl-2 {
+    display: block;
+    border: 0.2px solid #f65058;
+}
+
+/*-----Links-----*/
+
+/* Styling the anchor tags */
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #f65058;
+    padding-bottom: 1px solid #fff;
+    border-bottom: 1px solid #f65058;
+}
+
+a p:hover,
+a p:active {
+    color: #f4202a; /* Makes the e-mail links red when hovered over */
+}
+
+
+/* ----------------------------------------------- */
+/* SECTION FEEDBACK */
+/* ----------------------------------------------- */
+
+/* Overriding the text color from floralwhite to black and desciding the background image*/
+.section-feedback {
+    color: #000;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(img/feedback.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(img/feedback.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* The fixed property makes the background-image NOT scroll with the page */
+}
+
+/* Text styling for the feedback heading */
+.feedback-text {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 130%;
+    word-spacing: 2px;
+}
+
+/* Heading for feedback section */
+.feedback-text:after {
+    margin: 10px auto 20px auto;
+    height: 2px;
+    width: 15%;
+}
+
+/* Styling the feedback boxes which includes the feedback, personas images and citations */
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Assigning and adjusting the special character, the quotation mark, in ISO in css code */
+blockquote:before {
+    content: "\201F"; /* css special character for DOUBLE HIGH-REVERSED-9 QUOTATION */
+    font-size: 300%;
+    display: block;
+    position: absolute;
+    top: -30px; /* Makes the quotation mark go in the opposite direction and therefore stays above the text */
+    left: -15px; /* Adjusting the text outside the text paragraphs */
+    
+}
+
+
+/*  */
+cite {
+    display: block; /* Making whitespace over the personas image and assosiated name */
+    margin-top: 20px;
+}
+
+/* Styling for the personas images */
+cite img {
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.personas-flag img {
+    display: block;
+    margin: 2%;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 245px;
+    -webkit-box-shadow: 0 2px 2px 0 #000;
+    box-shadow: 0 2px 2px 0 #000; /* Adding box shadow to make the flags look more visible to the yellow background */
+}
+
+/* Horizontal line after each personas */
+.hrzl-3 {
+    display: block;
+    border: 0.2px solid #fffaf0;
+}
+
+
+
+/* ----------------------------------------------- */
+/* SECTION BOOK */
+/* ----------------------------------------------- */
+
+/**/
+.section-book {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Aligns heading */
+.text_book {
+    text-align: center;
+}
+
+/* Border under heading */
+.text_book:after {
+    margin: 10px auto 20px auto;
+    height: 2px;
+    background-color: #f65058;
+    width: 15%
+}
+
+/* Color for the heading */
+.book-headings {
+    color: #fffaf0;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+/* Color for the paragrahp */
+.book-price-person {
+    color: #fffaf0; 
+}
+
+/* Allows us to adjust some part of a text inside a paragraph */
+span {
+    font-size: 75%; /* Reducing the text */
+}
+
+/* Color for the paragrahp */
+.book-price-family {
+   color: #fffaf0; 
+}
+
+/* Padding and shadow for the 4 boxes */
+.cost-box {
+    background-color: #222;
+    padding: 4%;
+    -webkit-box-shadow: 0 0 2pc;
+    box-shadow: 0 0 2pc; /* White background shadow for each box */
+    color: #fffaf0;
+}
+
+/* Gets rid of bullet points */
+.cost-box li {
+    list-style: none;
+}
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+/* Centers the text */
+footer {
+    text-align: center;
+}
+
+/*-----Social media icons-----*/
+
+/* Removers bullet points and makes the social icons float to the left */
+footer li {
+    list-style: none;
+    float: left;
+    margin: 50px 15px;
+}
+
+/* Removes the border form the anchor tag */
+footer a:link,
+footer a:visited {
+    border: 0;
+}
+
+/* Adjusts the size and margin on each and evey social icon */
+.fab {
+    font-size: 200%;
+    margin: 3%
+}
+
+/*-----Instagram icon-----*/
+
+/* This advanced color code is retrieved from: https://stackoverflow.com/questions/38507734/fontawesome-instagram-icon-colorized/49659118 - by: Alawatta, N. */
+.icon-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Scales up when hovering over */
+.icon-instagram:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+
+/*-----Facebook icon-----*/
+.icon-facebook {
+    color: #3b5998; /* Facebooks ble color */
+}
+
+/* Scales up when hovering over */
+.icon-facebook:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+/*-----Icon Twitter-----*/
+
+.icon-twitter {
+    color: #00acee;
+}
+
+/* Scales up when hovering over */
+.icon-twitter:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+/* Hover efects for the social icons */
+
+
+/* ELECTRONIC WARNING NOTICE FOR COPYRIGHT STATUTORY LICENCES - Curtin */
+.footer-warning {
+    font-size: 60%;
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+/* @copyright */
+.footer-text {
+    font-size: 70%;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    width: 50%;
+}
