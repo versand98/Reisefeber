@@ -6,4 +6,4 @@ At Reisefeber, we provide all the essential information you need before embarkin
 
 We have offices in Oslo, London, San Francisco, and Perth, making it easy for you to connect with us no matter where you are. Our global presence ensures that no matter your time zone, our team is always available to assist you. 
 
-_Please be advised! This web site was part of my university project. Please be advised that the travel agency is fabricated and not operational._
+_Please be advised that the travel agency is fabricated and not operational. This web site was part of my university project._
